@@ -5,7 +5,7 @@ import numpy as np
 import os
 
 # Properties
-SCALE = 49    # Higher number, lower res
+SCALE = 16    # Higher number, lower res
 DIES_PER_CUBE = 3    # 3x3 cube
 CUBE_DIE_MAGNIFICATION = 30    # Higher number, higher res cube face images
 
@@ -81,9 +81,9 @@ def getGridMode(image, x1, y1, x2, y2, rows, cols):
 
     for i in range(x1, x2):
         for j in range(y1, y2):
-            if (x1 > rows or y1 > rows):
+            if (x1 > rows or y1 > cols):
                 pixelValue = getPixel(image, rows - 1, cols - 1)
-            elif (x2 > rows or y2 > rows):
+            elif (x2 > rows or y2 > cols):
                 pixelValue = getPixel(image, rows - 1, cols - 1)
             else:
                 pixelValue = getPixel(image, i, j)
