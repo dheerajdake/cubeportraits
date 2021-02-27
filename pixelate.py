@@ -5,12 +5,12 @@ import numpy as np
 import os
 
 # Properties
-SCALE = 100    # Higher number, lower res
-DIES_PER_CUBE = 4    # 3x3 cube
+SCALE = 49    # Higher number, lower res
+DIES_PER_CUBE = 3    # 3x3 cube
 CUBE_DIE_MAGNIFICATION = 30    # Higher number, higher res cube face images
 
 # File names
-FILE_INPUT_IMAGE = "test.jpg"
+FILE_INPUT_IMAGE = "katy.jpg"
 FILE_PIXELATED_IMAGE = FILE_INPUT_IMAGE[:-4] + "_pixelated.jpg"
 FILE_CUBE_COLORED_IMAGE = FILE_INPUT_IMAGE[:-4] + "_cubefied.jpg"
 FILE_CUBE_FACE_IMAGE_PREFIX = FILE_INPUT_IMAGE[:-4] + "_"
