@@ -196,9 +196,11 @@ def generateCubeFaces(image, root):
                     cubeFaceImage[a][b] = getPixel(image, _ix, _iy)
 
             # Save image
-            genFileName = CUBE_FACES_FOLDER + FILE_CUBE_FACE_IMAGE_PREFIX + str((cubesInCol*i) + j) + ".jpg"
+            index = (cubesInCol * i) + j
+            genFileName = CUBE_FACES_FOLDER + FILE_CUBE_FACE_IMAGE_PREFIX + str(index) + ".jpg"
             cv2.imwrite(genFileName, cubeFaceImage)
-    
+            print("Faces: {}/{}\r".format(index, totalCubes), end='')
+
     print("{} Cube faces generated".format(totalCubes))
 
 
